@@ -1,4 +1,4 @@
-# abduls_assignment_gui
+# activity_gui
 
 ## Project setup
 ```
