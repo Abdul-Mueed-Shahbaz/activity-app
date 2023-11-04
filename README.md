@@ -31,7 +31,7 @@ pip install -r requirements/bast.txt
 ```
 python manage.py migrate
 ```
-### *Staring Server
+### *Starting Server
 ```
 python manage.py runserver
 ```
