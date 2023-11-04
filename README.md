@@ -1,7 +1,6 @@
-# activity-app
+# Activity-App
 
 ## Backend: activity_api
-## Project setup
 ### Make sure to have python installed
 ### Install required packages
 ```
@@ -17,7 +16,6 @@ python manage.py runserver
 ```
 
 ## Frontend: activity_gui
-## Project setup
 ### Make sure to have node installed
 ### Install Packages
 ```
