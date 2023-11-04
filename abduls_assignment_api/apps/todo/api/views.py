@@ -16,14 +16,3 @@ class ActivityViewSet(ModelViewSet):
     queryset = Activity.objects.all().order_by("-updated_on")
     permission_classes = []
     authentication_classes = []
-
-    @action(
-        detail=True,
-        methods=["POST"],
-        url_path="change-status",
-        url_name="Change status of the activity",
-    )
-    def add_question_to_form(self, request, pk):
-        return Response(
-            {"message": "Question added successfully"}, status=status.HTTP_201_CREATED
-        )
