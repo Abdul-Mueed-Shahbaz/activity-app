@@ -1,0 +1,73 @@
+# Ignore virtual environments
+venv/
+.env
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore Python bytecode files and caches
+__pycache__/
+*.pyc
+
+# Ignore logs and log files
+log/
+*.log
+
+# Ignore environment-specific settings
+.env.local
+.env.*.local
+
+# Ignore compiled Python files
+*.pyc
+
+
+# Ignore Vue.js build output
+/dist/
+/node_modules/
+npm-debug.log
+
+
+# Ignore generated build files
+/dist/
+
+# Django .gitignore
+
+# Ignore virtual environment
+venv/
+
+# Ignore database
+db.sqlite3
+
+# Ignore static and media files
+/static/
+/media/
+
+# Ignore secret settings and API keys
+.env
+
+# Ignore Python bytecode files and caches
+__pycache__/
+*.pyc
+
+# Ignore logs and log files
+log/
+*.log
+
+# Ignore environment-specific settings
+.env.local
+.env.*.local
+
+# Ignore generated migration files
+/migrations/
+
+# Ignore development server
+.manage/
+
+# Ignore database backup files
+*.bak
+*.db
+*.sqlite3
+
+# Ignore any local settings
+*.local
+
