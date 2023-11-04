@@ -1,6 +1,6 @@
 # activity-app
 
-# activity_api
+## Backend: activity_api
 ## Project setup
 ### Make sure to have python installed
 ### Install required packages
@@ -16,7 +16,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-# activity_gui
+## Frontend: activity_gui
 ## Project setup
 ### Make sure to have node installed
 ### Install Packages
