@@ -32,7 +32,16 @@
             />
           </td>
           <td>{{ activity.name }}</td>
-          <td>{{ activity.desc || "N/A" }}</td>
+          <td
+            class="ellipsis"
+            @mouseover="showTooltip = true"
+            @mouseleave="showTooltip = false"
+          >
+            {{ activity.desc || "N/A" }}
+            <div v-if="showTooltip" class="tooltip">
+              {{ activity.desc || "N/A" }}
+            </div>
+          </td>
           <td>
             <button @click="$emit('delete', activity.id)">Delete</button>
           </td>
@@ -43,6 +52,8 @@
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
   name: "HelloWorld",
   props: {
@@ -52,12 +63,45 @@ export default {
     },
   },
   emits: ["delete", "changeStatus"],
+  setup() {
+    const showTooltip = ref(false);
+
+    return {
+      showTooltip,
+    };
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 $breakpoint-alpha: 480px;
+
+.ellipsis {
+  max-width: 200px; /* Adjust the maximum width as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+.ellipsis:hover + .tooltip {
+  display: block;
+}
 .activites {
   background: #34495e;
   color: #fff;
